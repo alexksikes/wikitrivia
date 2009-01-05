@@ -1,0 +1,8 @@
+$def with (categories)
+
+<p><strong>Choose a category:</strong></p>
+<p class="categories">
+$for (category, category_name) in categories:
+    <a href="/quiz/?category=$category">$:category_name</a>&nbsp;\
+    $if not loop.last: |
+</p>

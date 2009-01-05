@@ -1,0 +1,31 @@
+$def with (page, title='WikiTrivia')
+
+$# TODO: - see for how to change the title in template inheritance
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>$title</title>
+    <link rel="stylesheet" href="/public/default.css" type="text/css" media="screen, print, projection" />
+    <script type="text/javascript" src="/public/default.js"></script>
+</head>
+<body onload="delayContinue(3)">
+
+<div class="content">
+
+<h1><a href="/"><img src="/public/logo.jpg" alt="" /><br />WikiTrivia</a></h1>
+
+$:page
+
+<p class="footer">
+<em>WikiTrivia, the trivia game <strong>freshly generated from <a href="http://www.wikipedia.org">Wikipedia</a></strong> articles.</em><br />
+By Alex Ksikes (concept and <a href='http://github.com/alexksikes/wikitrivia/tree/master'>programming</a>) and Philipp Lenssen (programming)<br />
+&copy; May 2005 - 2009 - 
+<small><a href='mailto:alexandre.ksikes@gmail.com?subject=Wikitrivia'>Feedback</a> - 
+<a href='http://groups.google.com/group/wikitrivia'>Discuss</a> - 
+<a href='http://github.com/alexksikes/wikitrivia/tree/master'>Source code</a></small>
+</p>
+</div>
+
+</body>
+</html>

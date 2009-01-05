@@ -1,0 +1,49 @@
+$def with (question, score, category, category_name)
+
+$# TODO: - Get the question name
+
+<p id="loading">Loading article from Wikipedia...</p>
+
+$if question:
+    <p class="snippet">
+    $if question.image_url:
+        <img class="thumb" src="$question.image_url" alt="" />
+        <br /><br />
+    $:question.snippet_secret ...
+    </p>
+    
+    <form action="/answer" name="theform" method="post">
+    <div>
+        <p><em>What is being talked about in the quote from Wikipedia?</em></p>
+        <input type="text" name="guess" size="40" value="$question.answer[0]" />
+        
+        <input type="hidden" name="score" value="$score" />
+        <input type="hidden" name="answer" value="$question.answer" />
+        <input type="hidden" name="wiki_url" value="$question.wiki_url" />
+        <input type="hidden" name="category" value="$category" />
+        <input type="hidden" name="category_name" value="$category_name" />
+        <br />
+        
+        <span id="pleaseWait">Please wait...</span>        
+        
+        <input type="submit" value="Guess" id="continueButton" />
+    </div>
+    </form>
+$else:
+    <p>Question could not be loaded at the moment &#8211; please <a href=''>try again</a> or try later. I'm working to resolve this.</p>
+
+<div class="ad">
+    <script type="text/javascript"><!--
+    google_ad_client = "pub-1431948349807205";
+    /* 468x60, created 1/5/09 */
+    google_ad_slot = "8422565837";
+    google_ad_width = 468;
+    google_ad_height = 60;
+    //-->
+    </script>
+    <script type="text/javascript"
+    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script>
+</div>
+    
+<p class="changeCategory">Playing $:category_name | <a href="/">More categories...</a></p>

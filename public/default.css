@@ -1,0 +1,135 @@
+body
+{
+    background-color: #fff;
+    color: #000;
+    font-family: arial, helvetica, sans-serif;
+}
+
+a
+{
+    color: #34a;
+}
+
+h1
+{
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #aaa;
+}
+
+h1 a
+{
+    color: #aaa;
+    text-decoration: none;
+}
+
+.content
+{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.depleted
+{
+    color: white;
+    background-color: #ccc;
+}
+
+.subDepleted
+{
+}
+
+.right,
+.wrong
+{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.right
+{
+    color: green;
+}
+
+.wrong
+{
+    color: red;
+}
+
+.footer
+{
+    font-size: 90%;
+    border-top: 1px solid gray;
+    margin-top: 10px;
+    padding-top: 3px;
+    line-height: 19px;
+}
+
+.footer em {
+    font-weight: bold;
+}
+
+.snippet
+{
+    margin-bottom: 30px;
+}
+
+.points
+{
+    color: #ccc;
+    font-size: 40px;
+    letter-spacing: -2px;
+    font-weight: bold;
+}
+
+.categories
+{
+    font-size: 140%;
+    margin-bottom: 40px;
+    line-height: 40px;
+}
+
+.changeCategory
+{
+    margin-top: 60px;
+}
+
+a img
+{
+    border: 0;
+}
+
+.ad
+{
+    margin-top: 30px;
+}
+
+#continueButton
+{
+    visibility: hidden;
+}
+
+#pleaseWait
+{
+    font-size: 90%;
+    font-style: italic;
+}
+
+.thumb
+{
+}
+
+.german
+{
+    font-size: 75%;
+}
+
+#loading
+{
+    color: #999;
+    font-size: 90%;
+    font-style: italic;
+}
