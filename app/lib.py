@@ -1,10 +1,10 @@
 # Author: Alex Ksikes 
 
-import re, urllib, pycurl, cStringIO, string
+import re, urllib, pycurl, cStringIO, string, random
 from lxml import etree
 
 def yahoo_search(query, start, results):
-    appid = 'qw87vZXV34Fv5NbIhOHEleK5iL9RTgripE68mWDbEbry7KtyvUWZ6eyHq3uUU_HTFMg-'
+    appid = 'your app id'
     url = 'http://search.yahooapis.com/WebSearchService/V1/webSearch?appid=%s&query=%s&results=%s&start=%s' % \
     (appid, urllib.quote(query), results, start)
     xml = parse_xml(dnl(url))
@@ -52,6 +52,10 @@ def capitalize_first(str):
         str = ''
     return ' '.join(map(string.capitalize, str.lower().split()))
 
+def get_pub_id():
+    pub_ids = dict(alex = 'pub-1431948349807205', philipp = 'pub-4135663670627621')
+    return pub_ids.values()[random.randint(0,1)]
+    
 # we may want to use this in order to preserve some of html of wikipedia
 def strip_tags(html, ignore_tags='<b>|<i>|&#?\w+;'):
     skip_p = re.compile(ignore_tags, re.I)
