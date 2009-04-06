@@ -68,7 +68,8 @@ def make_question(url, category):
     
     snippet_secret = snippet
     for a in answer.split():
-        p = re.compile(r'\b%s\b' % re.escape(a), re.I)
+        if a[-1] == 's': a = a[:-1]
+        p = re.compile(r'\b%ss?\b' % re.escape(a), re.I)
         snippet_secret = p.sub('<strong class="depleted">' + '?' * len(a) + '</strong>', snippet_secret)
     
     image_url = web.listget(

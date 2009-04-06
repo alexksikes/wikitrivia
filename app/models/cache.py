@@ -21,5 +21,5 @@ def get_question(question):
     """Get a specific question from the cache."""
     return web.listget(
         db.select('wikitrivia_cache', 
-            vars=dict(url=wiki_url),
+            vars=dict(url=question.wiki_url),
             where='wiki_url = $url', limit=1), 0, False)

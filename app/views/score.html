@@ -1,4 +1,4 @@
-$def with (score, question, success)
+$def with (score, question, success, pub_id)
 
 $if success:
     <p class="right">
@@ -15,7 +15,7 @@ $else:
 
 <div class="ad">
     <script type="text/javascript"><!--
-    google_ad_client = "pub-1431948349807205";
+    google_ad_client = "$pub_id";
     /* 468x60, created 1/5/09 */
     google_ad_slot = "8422565837";
     google_ad_width = 468;

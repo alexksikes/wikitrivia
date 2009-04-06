@@ -6,6 +6,7 @@ import config
 from app.models import questions
 from app.models import score
 from app.models import categories
+from app import lib
 from config import view
 
 class index:
@@ -35,4 +36,5 @@ class answer:
             cscore = score.update_score(cscore)
         
         category_name = categories.get_category_name(i.category)
-        return view.layout(view.score(cscore, i, success), title='Wikitrivia - ' + category_name)
+        return view.layout(view.score(cscore, i, success, pub_id=lib.get_pub_id()), 
+            title='Wikitrivia - ' + category_name)
