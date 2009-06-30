@@ -1,12 +1,13 @@
 # Author: Alex Ksikes 
 
+import config
+
 import re, urllib, pycurl, cStringIO, string, random
 from lxml import etree
 
 def yahoo_search(query, start, results):
-    appid = 'your app id'
     url = 'http://search.yahooapis.com/WebSearchService/V1/webSearch?appid=%s&query=%s&results=%s&start=%s' % \
-    (appid, urllib.quote(query), results, start)
+    (config.yahoo_appid, urllib.quote(query), results, start)
     xml = parse_xml(dnl(url))
     
     results = []

@@ -1,7 +1,7 @@
 import web, os
 
 # connect to database
-db = web.database(dbn='mysql', db='wikitrivia', user='', passwd='')
+db = web.database(dbn='mysql', db='wikitrivia', user='user', passwd='password')
 
 # in development debug error messages and reloader
 web.config.debug = True
@@ -13,4 +13,7 @@ cache = False
 view = web.template.render('app/views', cache=cache)
 
 # used to encrypt the answer
-encryption_key = 'mi$ey'
+encryption_key = 'a random string'
+
+# your yahoo app id
+yahoo_appid = ''
